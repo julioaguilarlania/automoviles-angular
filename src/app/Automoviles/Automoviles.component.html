@@ -1,3 +1,24 @@
 <div>
   <h2>Automóviles</h2>
+
+  <div>
+    <table>
+      <thead>
+        <tr>
+          <th>Placas</th>
+          <th>Marca</th>
+          <th>Modelo</th>
+          <th>Color</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let auto of listaAutomoviles">
+          <td>{{ auto.placas }}</td>
+          <td>{{ auto.marca }}</td>
+          <td>{{ auto.modelo }}</td>
+          <td>{{ auto.color }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </div>
