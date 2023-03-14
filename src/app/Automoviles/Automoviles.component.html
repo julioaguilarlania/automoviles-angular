@@ -17,6 +17,18 @@
           <td>{{ auto.marca }}</td>
           <td>{{ auto.modelo }}</td>
           <td>{{ auto.color }}</td>
+          <td>
+            <a [routerLink]="['/automoviles',auto.placas]">Detalle</a>
+          </td>
+          <td>
+            <button [routerLink]="['/automoviles',auto.placas]">Detalle</button>
+          </td>
+          <td>
+            <span (click)="verDetalle(auto.placas)">Detalle</span>
+          </td>
+          <td>
+            <button (click)="verDetalle(auto.placas)">Detalle</button>
+          </td>
         </tr>
       </tbody>
     </table>

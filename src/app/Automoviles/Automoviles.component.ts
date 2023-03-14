@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { Router } from "@angular/router";
 import { Automovil } from "./automovil.model";
 import { AutomovilesService } from "./automoviles.service";
 
@@ -9,7 +10,8 @@ import { AutomovilesService } from "./automoviles.service";
 export class Automoviles implements OnInit {
 
   listaAutomoviles:Automovil[] = [];
-  constructor(private autoService: AutomovilesService) {}
+  constructor(private autoService: AutomovilesService,
+    private router:Router) {}
 
   ngOnInit(): void {
     //this.listaAutomoviles = this.autoService.getAutomoviles();
@@ -35,5 +37,10 @@ export class Automoviles implements OnInit {
         this.listaAutomoviles = lista
       })
       console.log('DESPUES DE SUBSCRIBE')
+  }
+
+  verDetalle(placas: string) {
+    this.router.navigate(['/automoviles', placas])
+    //this.router.navigate('/automoviles/'+placas)
   }
 }
