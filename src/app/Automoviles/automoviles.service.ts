@@ -37,7 +37,7 @@ export class AutomovilesService {
   getAutomovilPorPlacas(placas: string) : Observable<Automovil>
   {
     return this.http
-      .get<Automovil>(this.BACKEND_URL + '/vehiculo/' + placas)
+      .get<Automovil>(this.BACKEND_URL + '/vehiculos/' + placas)
   }
 
   crearAutomovil(objeto: Automovil) : Observable<Automovil>

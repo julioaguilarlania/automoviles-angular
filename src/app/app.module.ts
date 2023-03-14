@@ -6,10 +6,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { Automoviles } from './Automoviles/Automoviles.component';
 import { EjemploBasico } from './EjemploBasico/EjemploBasico.component';
+import { DetalleAutomovilComponent } from './detalle-automovil/detalle-automovil.component';
 
 @NgModule({
   declarations: [
-    AppComponent,EjemploBasico, Automoviles
+    AppComponent,EjemploBasico, Automoviles, DetalleAutomovilComponent
   ],
   imports: [
     BrowserModule,
