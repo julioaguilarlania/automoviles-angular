@@ -12,6 +12,28 @@ export class Automoviles implements OnInit {
   constructor(private autoService: AutomovilesService) {}
 
   ngOnInit(): void {
-    this.listaAutomoviles = this.autoService.getAutomoviles();
+    //this.listaAutomoviles = this.autoService.getAutomoviles();
+    /*
+    this.autoService.getAutomoviles().subscribe({
+      next: (lista) => {
+        console.log("LISTA", lista)
+        this.listaAutomoviles = lista},
+      error: (err) => {},
+      complete: () => {}
+    });
+    this.autoService.getAutomoviles().subscribe(
+      (lista) => {
+        console.log("LISTA", lista)
+        this.listaAutomoviles = lista},
+      (err) => {},
+      () => {}
+    );
+    */
+    this.autoService.getAutomoviles()
+      .subscribe(lista => {
+        console.log('LISTA', lista)
+        this.listaAutomoviles = lista
+      })
+      console.log('DESPUES DE SUBSCRIBE')
   }
 }
