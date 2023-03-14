@@ -46,6 +46,6 @@ export class AutomovilesService {
       objeto.cliente = {clienteId: 1, nombre:'',curp:'',fechaRegistro:new Date()}
     }
     return this.http
-      .post<Automovil>(this.BACKEND_URL, objeto)
+      .post<Automovil>(this.BACKEND_URL+'/vehiculos', objeto)
   }
 }
