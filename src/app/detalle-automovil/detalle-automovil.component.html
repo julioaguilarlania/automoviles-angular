@@ -17,5 +17,10 @@
       <td>Color:</td>
       <td>{{ automovil.color }}</td>
     </tr>
+    <tr>
+      <td>Cliente:</td>
+      <td>{{ automovil.cliente?.nombre }} desde
+        {{automovil.cliente?.fechaRegistro | date:'medium'}} </td>
+    </tr>
   </table>
 </div>
