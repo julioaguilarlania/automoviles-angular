@@ -1,6 +1,9 @@
 <div>
   <h2>Nuevo Automóvil</h2>
 
+  <div *ngIf="mensaje.length > 0">
+    {{ mensaje }} <button (click)="mensaje=''">X</button>
+  </div>
   <table>
     <tr>
       <td>Placas:</td>
@@ -17,6 +20,14 @@
     <tr>
       <td>Color:</td>
       <td><input type="text" [(ngModel)]="automovil.color"></td>
+    </tr>
+    <tr>
+      <td>Cliente:</td>
+      <td><select [(ngModel)]="idClienteSeleccionado">
+        <option value="-1">Seleccione un cliente</option>
+        <option value="1">Cliente A</option>
+        <option value="2">Cliente B</option>
+      </select></td>
     </tr>
     <tr>
       <td></td>
