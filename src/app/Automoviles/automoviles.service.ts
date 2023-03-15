@@ -2,13 +2,14 @@ import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core"
 import { Observable, of } from "rxjs";
 import { Automovil } from "./automovil.model";
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: "root"
 })
 export class AutomovilesService {
 
-  BACKEND_URL = 'http://localhost:8080'
+  BACKEND_URL = environment.BACKEND_URL
   constructor(private http:HttpClient) {}
 
   getAutomoviles() : Observable<Automovil[]> {

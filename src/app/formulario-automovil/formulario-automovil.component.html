@@ -25,8 +25,9 @@
       <td>Cliente:</td>
       <td><select [(ngModel)]="idClienteSeleccionado">
         <option value="-1">Seleccione un cliente</option>
-        <option value="1">Cliente A</option>
-        <option value="2">Cliente B</option>
+        <option
+          *ngFor="let cl of listaClientes"
+          [ngValue]="cl.clienteId">{{ cl.nombre }}</option>
       </select></td>
     </tr>
     <tr>

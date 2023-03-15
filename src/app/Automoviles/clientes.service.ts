@@ -1,15 +1,18 @@
 import { HttpClient } from "@angular/common/http";
+import { Injectable } from "@angular/core";
 import { Observable } from "rxjs";
 import { Cliente } from "./cliente.model";
-
+import { environment } from "src/environments/environment";
+@Injectable({
+  providedIn:'root'
+})
 export class ClientesService {
 
-  BACKEND_URL = 'http://localhost:8080'
   constructor(private http:HttpClient) {}
 
   getClientes() : Observable<Cliente[]>
   {
     return this.http
-      .get<Cliente[]>(this.BACKEND_URL + '/clientes');
+      .get<Cliente[]>(environment.BACKEND_URL + '/clientes');
   }
 }
