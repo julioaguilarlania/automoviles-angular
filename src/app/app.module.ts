@@ -11,10 +11,12 @@ import { FormularioAutomovilComponent } from './formulario-automovil/formulario-
 import { FormsModule } from '@angular/forms';
 import { TarjetaAutomovilComponent } from './tarjeta-automovil/tarjeta-automovil.component';
 import { ListaTarjetasComponent } from './lista-tarjetas/lista-tarjetas.component';
+import { ListaConVistaComponent } from './lista-con-vista/lista-con-vista.component';
+import { VistaComponent } from './vista/vista.component';
 
 @NgModule({
   declarations: [
-    AppComponent,EjemploBasico, Automoviles, DetalleAutomovilComponent, FormularioAutomovilComponent, TarjetaAutomovilComponent, ListaTarjetasComponent
+    AppComponent,EjemploBasico, Automoviles, DetalleAutomovilComponent, FormularioAutomovilComponent, TarjetaAutomovilComponent, ListaTarjetasComponent, ListaConVistaComponent, VistaComponent
   ],
   imports: [
     BrowserModule,

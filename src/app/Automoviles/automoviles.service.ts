@@ -1,6 +1,6 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core"
-import { Observable, of } from "rxjs";
+import { Observable, of, Subject } from "rxjs";
 import { Automovil } from "./automovil.model";
 import { environment } from 'src/environments/environment';
 
@@ -48,5 +48,10 @@ export class AutomovilesService {
     }
     return this.http
       .post<Automovil>(this.BACKEND_URL+'/vehiculos', objeto)
+  }
+
+  autoSubject: Subject<string> = new Subject<string>()
+  enviarPlacas(placas: string) {
+    this.autoSubject.next(placas)
   }
 }

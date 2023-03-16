@@ -1,0 +1,14 @@
+<div>
+  <h2>Automóviles</h2>
+
+  <table>
+    <tr *ngFor="let a of listaAutomoviles">
+      <td>{{ a.placas }}
+        <button (click)="cargarAutomovil(a.placas)">Ver</button>
+      </td>
+    </tr>
+  </table>
+  <div class="vista">
+    <app-vista></app-vista>
+  </div>
+</div>
