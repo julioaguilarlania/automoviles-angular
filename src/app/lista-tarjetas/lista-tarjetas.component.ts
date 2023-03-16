@@ -3,11 +3,11 @@ import { Automovil } from '../Automoviles/automovil.model';
 import { AutomovilesService } from '../Automoviles/automoviles.service';
 
 @Component({
-  selector: 'app-lista-automoviles',
-  templateUrl: './lista-automoviles.component.html',
-  styleUrls: ['./lista-automoviles.component.css']
+  selector: 'app-lista-tarjetas',
+  templateUrl: './lista-tarjetas.component.html',
+  styleUrls: ['./lista-tarjetas.component.css']
 })
-export class ListaAutomovilesComponent implements OnInit{
+export class ListaTarjetasComponent  implements OnInit{
   listaAutomoviles: Automovil[] = []
 
   constructor(private autoService: AutomovilesService) {}
