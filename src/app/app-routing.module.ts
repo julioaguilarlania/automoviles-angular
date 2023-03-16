@@ -4,6 +4,7 @@ import { Automoviles } from './Automoviles/Automoviles.component';
 import { DetalleAutomovilComponent } from './detalle-automovil/detalle-automovil.component';
 import { EjemploBasico } from './EjemploBasico/EjemploBasico.component';
 import { FormularioAutomovilComponent } from './formulario-automovil/formulario-automovil.component';
+import { ListaAutomovilesComponent } from './lista-automoviles/lista-automoviles.component';
 
 const routes: Routes = [
   {
@@ -21,6 +22,10 @@ const routes: Routes = [
   {
     path:'automoviles/:id',
     component: DetalleAutomovilComponent
+  },
+  {
+    path:'tarjetas',
+    component: ListaAutomovilesComponent
   }
 ];
 

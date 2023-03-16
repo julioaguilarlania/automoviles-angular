@@ -9,10 +9,12 @@ import { EjemploBasico } from './EjemploBasico/EjemploBasico.component';
 import { DetalleAutomovilComponent } from './detalle-automovil/detalle-automovil.component';
 import { FormularioAutomovilComponent } from './formulario-automovil/formulario-automovil.component';
 import { FormsModule } from '@angular/forms';
+import { ListaAutomovilesComponent } from './lista-automoviles/lista-automoviles.component';
+import { TarjetaAutomovilComponent } from './tarjeta-automovil/tarjeta-automovil.component';
 
 @NgModule({
   declarations: [
-    AppComponent,EjemploBasico, Automoviles, DetalleAutomovilComponent, FormularioAutomovilComponent
+    AppComponent,EjemploBasico, Automoviles, DetalleAutomovilComponent, FormularioAutomovilComponent, ListaAutomovilesComponent, TarjetaAutomovilComponent
   ],
   imports: [
     BrowserModule,
